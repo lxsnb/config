@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+#          #########开源中国的git##########
+#          uri: https://gitee.com/lxsnb/config-repo
+#          username: 946867173@qq.com
+#          password: lcwabcdefg123
+          ##########github的######################
+          uri: https://github.com/lxsnb/config-repo.git
+          username: 946867173@qq.com
+          password: lcwabcdefg123
+          #要和开源中国的basedir不一样
+          basedir: I:\Git\github_basedir
+#          strict-host-key-checking: false
+  rabbitmq:
+    addresses: 192.168.99.100
+    username: guest
+    password: guest
+    port: 5672
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.99.100:8761/eureka
+####对外暴露所有接口，包括/bus-refresh#######
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
