@@ -21,7 +21,7 @@ spring:
     username: guest
     password: guest
     port: 5672
-
+####tag1-2:第二次git提交测试#####
 eureka:
   client:
     service-url:
